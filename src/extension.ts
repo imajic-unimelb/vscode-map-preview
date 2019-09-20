@@ -92,9 +92,10 @@ class PreviewDocumentContentProvider implements vscode.TextDocumentContentProvid
     }
 
     public provideTextDocumentContent(uri: vscode.Uri): string {
+        // const content = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection)
         const content = this.generateDocumentContent(uri);
         const sUri = uri.toString();
-        return content;
+        return sUri;
     }
 
     private errorSnippet(error: string): string {
